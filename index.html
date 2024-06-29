@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Spooky Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="splash-screen">
+        <div class="glitch" data-text="KIRTI PARMAR">KIRTI PARMAR</div>
+    </div>
+
+    <header class="header">
+        <div class="logo-container">
+            <a href="#" class="logo">KIRTI PARMAR</a>
+        </div>
+        <nav class="navbar">
+            <a href="#home" class="nav-link active">HOME</a>
+            <a href="#education" class="nav-link">EDUCATION</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <section id="home" class="section active">
+            <div class="container">
+                <h1>Hey, I'm Kirti Parmar</h1>
+                <h3>You can call me <i>Kimmy</i></h3>
+                <a href="KirtiParmar.pdf" download>
+                    <button class="title">DOWNLOAD RESUME</button>
+                </a>
+            </div>
+            <div class="socials">
+                <a href="https://twitter.com/kimmzaccnt" target="_blank">
+                    <img src="icons/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/in/parmar-kirti" target="_blank">
+                    <img src="icons/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/kirti36" target="_blank">
+                    <img src="icons/github.png" alt="GitHub">
+                </a>
+                <a href="https://instagram.com/parmarkirtii" target="_blank">
+                    <img src="icons/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="education">
+                <div class="education-item">
+                    <h3>AD Patel Institute of Technology</h3>
+                    <p>Bachelor of Technology, 2021 - 2025</p>
+                    <p>Artificial Intelligence and Data Science</p>
+                </div>
+                <div class="education-item">
+                    <h3>High School Name</h3>
+                    <p>High School Diploma, 2014 - 2018</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="contact-card">
+                <h2>Get in touch</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="quotes">
+            <p>"The best way to predict the future is to create it." - Peter Drucker</p>
+        </div>
+        <div class="rights">
+            <p>Made with ❤️ by Kimmy</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
