@@ -7,6 +7,7 @@
     <title>Kirti Parmar</title>
     <link rel="icon" href="assets/title.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
 
 <body>
     <div id="splash-screen">
-        <div class="glitch" data-text="KIRTI PARMAR">KIRTI PARMAR</div>
+        <div class="glitch" data-text="KIMMY">KIMMY</div>
     </div>
 
     <header class="header">
@@ -36,12 +37,11 @@
                 <h1>Hey, I'm Kirti Parmar</h1>
                 <h3>You can call me Kimmy</h3>
                 <div class="Abt">
-                    <p>Hello! I am currently pursuing my education at A.D. Patel Institute of Technology, where I have been excelling academically with a remarkable CGPA of 8.42 in the first four semesters. My major coursework focuses on essential subjects
-                        such as operating systems, database management systems, computer networks, object-oriented programming, data structures and algorithms.</p>
-                    <p>Since beginning my educational journey in 2021, I have been dedicated to expanding my knowledge and skills in the field of computer science. With an expected graduation year of 2025, I am eager to leverage my education to contribute
-                        meaningfully to the world of technology and embark on exciting opportunities.</p>
+                    <p>
+                        I am a passionate and driven Artificial intelligence and data science student with a strong foundation in both theory and practical application.</p>
+
                 </div>
-                <a href="KirtiParmar.pdf" download class="btn">DOWNLOAD RESUME</a>
+                <a href="assets/myresume.pdf" download class="btn">Resume</a>
             </div>
         </section>
     </div>
@@ -86,7 +86,7 @@
 
                     </div>
                 </div>
-                <!-- Add more education items here -->
+
             </div>
         </div>
     </section>
@@ -94,35 +94,40 @@
     <section id="projects" class="section">
         <div class="section-header">
             <h2>My Projects</h2>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="assets/st.jpg" alt="Project 1">
+                <div class="content">
+                    <h3>Student Performance Prediction</h3>
+                    <a href="https://github.com/Kirti36/Check-It" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/face.jpg" alt="Project 2">
+                <div class="content">
+                    <h3>Face Recognition using opencv & tkinter</h3>
+
+                    <a href="https://github.com/Kirti36/Face-Recognition" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+            <p>Check out my <a href="https://github.com/kirti36">GitHub</a> repo for more projects!!</p>
 
         </div>
-        <div class="projects">
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('assets/girl.png');"></div>
-                <div class="project-info">
-                    <h3>Project 1</h3>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('project2.jpg');"></div>
-                <div class="project-info">
-                    <h3>project 2</h3>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('assets/rocket.png');"></div>
-                <div class="project-info">
-                    <h3>Project 3</h3>
-                </div>
-            </div>
-        </div>
     </section>
+
 
 
     <section id="contact" class="section">
         <div class="contact-card">
             <h2>Get in touch</h2>
-            <form id="contact-form">
+            <form id="contact-form" action="/submit-form" method="POST">
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
@@ -133,12 +138,11 @@
             </form>
         </div>
     </section>
+
     </div>
 
     <footer class="footer">
-        <div class="quotes">
-            <p>"The best way to predict the future is to create it." - Peter Drucker</p>
-        </div>
+
         <div class="rights">
             <p>Made with ❤️ by Kimmy</p>
         </div>

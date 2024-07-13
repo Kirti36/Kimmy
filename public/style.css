@@ -18,15 +18,16 @@ html {
 
 /* Track */
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.167);
     border-radius: 10px;
+    background-color: black;
 }
 
 
 /* Handle */
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgb(237, 8, 8);
     border-radius: 10px;
 }
@@ -34,7 +35,7 @@ html {
 
 /* Handle on hover */
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #b30000;
 }
 
@@ -64,7 +65,7 @@ html {
     font-size: 5rem;
     font-weight: bold;
     font-family: 'Uncial Antiqua', cursive;
-    color: #fff;
+    color: #fc0505;
     text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
     animation: glow 40s infinite;
 }
@@ -72,15 +73,12 @@ html {
 @keyframes glow {
     0% {
         text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
-        /* Initial glow effect */
     }
     50% {
         text-shadow: 0 0 20px #ff4b2b, 0 0 40px #ff4b2b, 0 0 60px #ff4b2b;
-        /* Larger glow effect */
     }
     100% {
         text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
-        /* Return to original glow effect */
     }
 }
 
@@ -90,14 +88,12 @@ html {
 .section {
     position: relative;
     height: 100vh;
-    /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
     background-attachment: fixed;
-    /* Parallax effect */
     background-size: cover;
     background-position: center;
 }
@@ -120,7 +116,7 @@ html {
 }
 
 
-/* Other styles (e.g., header, footer, buttons, etc.) */
+/* Header */
 
 .header {
     position: fixed;
@@ -160,6 +156,22 @@ html {
     color: #ff0000;
 }
 
+
+/* Responsive Navigation */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .nav-link {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+
+/* Titles */
+
 .title {
     font-size: 18px;
     font-weight: bold;
@@ -178,44 +190,38 @@ html {
     transform: scale(1.1);
 }
 
+
+/* Socials */
+
 .socials {
     position: fixed;
-    top: 50%;
+    top: 85%;
     left: 0;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    /* Adjust the space between icons */
     padding: 10px;
     background-color: rgba(255, 251, 251, 0.5);
-    /* Optional: to give a semi-transparent background */
     border-radius: 0 10px 10px 0;
-    /* Optional: rounded corners on the right side */
-    z-index: 1000;
-    /* To ensure it stays on top */
+    z-index: 100;
 }
 
 .socials a {
     display: block;
     text-decoration: none;
     color: white;
-    /* Optional: if you want to apply a color to text/icons */
     transition: transform 0.3s, filter 0.3s;
-    /* Smooth transition for hover effects */
 }
 
 .socials a:hover {
     transform: scale(1.2);
-    /* Slightly enlarge on hover */
     filter: brightness(1.2);
-    /* Brighten on hover */
 }
 
 .socials img {
-    width: 30px;
-    /* Adjust the size of the icons */
+    width: 25px;
     height: auto;
 }
 
@@ -224,14 +230,11 @@ html {
 
 .container {
     max-width: 800px;
-    /* Adjust as needed */
     margin: 0 auto;
     padding: 20px;
     background-color: #00000049;
-    /* White background */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 h1,
@@ -257,9 +260,7 @@ p {
     display: inline-block;
     padding: 10px 20px;
     background-color: #373a3d88;
-    /* Blue background */
     color: #fff;
-    /* White text */
     text-decoration: none;
     border-radius: 4px;
     border: none;
@@ -269,31 +270,42 @@ p {
 
 .btn:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
+}
+
+
+/* Responsive HOME */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 14px;
+    }
 }
 
 
 /* Education Items */
 
 .education-container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     position: relative;
     z-index: 2;
-    /* Ensure it stays above the background */
 }
 
 .education-header {
     text-align: center;
     margin-bottom: 50px;
     color: white;
-    /* For better contrast with background */
 }
 
 .education-header h2 {
-    font-size: 36px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-    /* For better contrast with background */
 }
 
 .education-item {
@@ -328,7 +340,6 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     color: white;
-    /* For better contrast with background */
 }
 
 .education-item .content:hover {
@@ -338,11 +349,11 @@ p {
 .education-item::after {
     content: ' ';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #f7a93cd9;
+    width: 10px;
+    height: 10px;
+    background-color: #f80b0bd9;
     border: 4px solid #555151;
-    top: 20px;
+    top: 15px;
     left: 50%;
     margin-left: -13px;
     border-radius: 50%;
@@ -354,187 +365,229 @@ p {
 
 .education-item .content h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
     color: rgb(240, 235, 235);
-    /* For better contrast with background */
 }
 
 .education-item .content p {
     margin: 5px 0;
     color: white;
-    /* For better contrast with background */
 }
 
 
 /* Animation: Items come one by one */
 
 .education-item:nth-child(1) {
-    transition-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .education-item:nth-child(2) {
-    transition-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
 .education-item:nth-child(3) {
-    transition-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.education-item:nth-child(4) {
+    animation-delay: 1.2s;
 }
 
 
-/* PROJECTS */
+/* Responsive Education */
 
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-right: 60px;
-    color: white;
-    /* For better contrast with background */
-    position: relative;
-    z-index: 1;
-    /* Ensure the header is on top of the project cards */
-}
-
-.section-header h2 {
-    font-size: 36px;
-    color: white;
-    /* For better contrast with background */
-}
-
-.section-header p {
-    font-size: 18px;
-    color: white;
-    /* For better contrast with background */
+@media (max-width: 768px) {
+    .education-item {
+        width: 100%;
+        text-align: center;
+    }
+    .education-item.left,
+    .education-item.right {
+        left: 0;
+        text-align: center;
+    }
+    .education-item::after {
+        left: calc(50% - 2px);
+    }
+    .education-item .content {
+        padding: 20px;
+    }
 }
 
 
-/* Project Cards */
+/* Projects Section */
 
-.projects {
+.projects-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    /* Adjust as needed */
+    margin: auto;
 }
 
 .project-card {
-    position: relative;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    margin: 10px;
-    width: 300px;
-    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    z-index: 0;
+    flex: 1 1 calc(33.333% - 40px);
+    /* Adjusts to 3 columns */
+    max-width: calc(33.333% - 40px);
+    /* Adjusts to 3 columns */
+    text-align: center;
+    color: black;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
-    background-size: cover;
-    background-position: center;
+.project-card img {
     width: 100%;
-    height: 100%;
-    transition: transform 0.3s;
+    height: 100px;
+    object-fit: cover;
 }
 
-.project-card:hover .project-image {
-    transform: scale(1.1);
-}
-
-.project-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+.project-card .content {
     padding: 20px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s, transform 0.3s;
 }
 
-.project-card:hover .project-info {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.project-info h3 {
+.project-card h3 {
     margin: 0;
     font-size: 20px;
-    text-align: center;
-}
-
-
-/* Contact */
-
-.contact-card {
-    background: rgba(174, 173, 173, 0.796);
-    border-radius: 15px;
-    padding: 30px;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-#contact-form label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
     color: #333;
 }
 
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
+.project-card .content a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+}
+
+.project-card .content a:hover {
+    color: #fc3a3a;
+}
+
+.project-card .content a i {
+    margin-right: 5px;
+}
+
+
+/* Responsive Projects */
+
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 40px);
+        /* Adjusts to 2 columns */
+        max-width: calc(50% - 40px);
+        /* Adjusts to 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        flex: 1 1 100%;
+        /* Full width on small screens */
+        max-width: 100%;
+        /* Full width on small screens */
+    }
+}
+
+
+/* Contact Card */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-card {
+    background-color: #0000009e;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    color: white;
+}
+
+.contact-card h2 {
+    text-align: center;
     margin-bottom: 20px;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    background: #fff;
-    transition: border-color 0.3s;
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: #151211;
-    outline: none;
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#contact-form button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    color: #fff;
-    background: linear-gradient(45deg, #9f6270, #e99283);
+.contact-card input,
+.contact-card textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #ccc;
+}
+
+.contact-card button {
+    padding: 10px;
+    background-color: #f7a93c;
+    color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
-#contact-form button:hover {
-    background: linear-gradient(45deg, #84bbeb, #3ca2de);
-    transform: scale(1.05);
+.contact-card button:hover {
+    background-color: #373a3d88;
 }
 
-.footer {
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    position: relative;
+.contact-card p {
+    margin: 0;
+}
+
+.contact-card label {
+    color: white;
+}
+
+
+/* Responsive Contact Card */
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 20px;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    height: 100px;
+    /* Adjust this height as needed */
+}
+
+footer p {
+    margin: 0;
 }
