@@ -39,3 +39,13 @@ Start the server:
 node app.js
 ```
 :eyes: Open your browser and go to http://localhost:3000 to view the webpage.
+
+
+## 📸 Screenshots
+
+
+|   |   |   |   |      
+|---|---|---| 
+
+|![](https://github.com/Kirti36/Kimmy/blob/main/public/assets/Screenshot%20(116).png)|![](https://github.com/Kirti36/Kimmy/blob/main/public/assets/Screenshot%20(144).png)|![](https://github.com/Kirti36/Kimmy/blob/main/public/assets/Screenshot%20(145).png)|![](https://github.com/Kirti36/Kimmy/blob/main/public/assets/Screenshot%20(148).png)
+|![](https://github.com/Kirti36/Kimmy/blob/main/public/assets/Screenshot%20(147).png)|![](https://github.com/Kirti36/Kimmy/blob/main/public/assets/Screenshot%20(146).png)|
